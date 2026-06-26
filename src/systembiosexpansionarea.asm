@@ -444,7 +444,7 @@ BITS 32
 ;
 ;   Test user mode (ring 3) switching
 ;
-	call far C_SEG_PROT32:clearTSSfar
+	o32 call C_SEG_PROT32:clearTSSfar
 	mov    ax, D_SEG_PROT32
 	mov    ds, ax
 	mov    es, ax

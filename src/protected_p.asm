@@ -6,7 +6,7 @@ initIntGateProt:
 
 initIntGateProtFar:
 	call initIntGate
-	retf
+	o32 retf
 
 initIntTaskGateProt:
 	initIntTaskGate

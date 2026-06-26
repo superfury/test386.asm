@@ -328,11 +328,11 @@
 	jnz %%ring3
 %%ring0:
 	lds  ebx, [cs:ptrIDTprot_R0]
-	call far C_SEG_PROT32:initIntGateProtFar
+	o32 call C_SEG_PROT32:initIntGateProtFar
 	jmp %%call
 %%ring3:
 	lds  ebx, [cs:ptrIDTUprot_R3]
-	call far CU_SEG_PROT32|3:initIntGateProtFar
+	o32 call CU_SEG_PROT32|3:initIntGateProtFar
 %%call:
 	pop  ax
 	mov  ds, ax  ; restore ds

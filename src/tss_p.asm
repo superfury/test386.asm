@@ -75,7 +75,7 @@ clearTSS:
 ;Far call version of clearTSS
 clearTSSfar:
 	call clearTSS
-	retf
+	o32 retf
 
 ; Prepare 32-bit TSS for task switching
 
